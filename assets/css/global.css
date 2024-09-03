@@ -1,0 +1,47 @@
+:root {
+    /* Colors */
+    --branco: #fff;
+    --preto: #000;
+    --neutral-c: #f5f5f5;
+    --cinza-escuro: #8c8c8c;
+    --grafite: #222;
+    --vermelho: #b81515;
+}
+
+* {
+    font-family: Montserrat;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Cor de fundo */
+    font-family: "Merriweather", serif;
+
+}
+p{
+    font-family: "Merriweather", serif;
+}
+
+h1 {
+    text-decoration: none;
+    color: var(--branco);
+    font-family: "Merriweather", serif;
+}
+
+h2 {
+    color: var(--branco);
+    font-family: "Merriweather", serif;
+}
+.Text__nome {
+    color: var(--branco);
+}
+
+header.banner__inicial {
+    text-align: center; /* Centraliza o texto dentro do header */
+    padding: 20px; /* Espaço interno ao redor do conteúdo */
+    background-color: #fff; /* Cor de fundo do header */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}

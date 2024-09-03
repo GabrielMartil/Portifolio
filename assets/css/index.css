@@ -1,0 +1,278 @@
+.portifolio{
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo geral para a barra de ferramentas */
+.toolbar {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens no topo do contêiner */
+    justify-content: flex-start; /* Alinha os itens à esquerda do contêiner */
+    flex-direction: column;
+    position: absolute; /* Remove o contêiner do fluxo normal do documento */
+    top: 10px; /* Espaço do topo da tela */
+    left: 10px; /* Espaço do lado esquerdo da tela */
+    padding: 20px; /* Espaçamento interno opcional */
+    gap: 10px;
+}
+
+/* Estilo para os ícones dentro da barra de ferramentas */
+.toolbar-icon {
+    width: 2vw; /* Largura dos ícones */
+    height: 2vw; /* Mantém a proporção original dos ícones */
+    margin-bottom: 5px; /* Espaçamento entre os ícones */
+}
+
+.banner__inicial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Necessário para o posicionamento absoluto dos filhos */
+    padding: 20px;
+    background-image: url('../img/banner-fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center; /* Centraliza o texto */
+}
+
+.banner__inicial::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(22, 22, 22, 0.603); /* Efeito de opacidade */
+    z-index: 0; /* Faz com que fique atrás do conteúdo */
+}
+.Bio_Texto-nome,
+.toolbar-icon,
+.Text__nome,
+.banner__imagem {
+    position: relative; /* Faz com que esses elementos fiquem sobre o pseudo-elemento */
+    z-index: 1; /* Garante que fiquem acima do efeito de opacidade */  
+    font-size: 2vw; /* Tamanho da fonte relativo à largura da tela */
+    margin: 0;
+    
+}
+
+.image-container {
+    text-align: center; /* Centraliza a imagem dentro do contêiner */
+}
+
+.banner__imagem {
+    max-width: 100%; /* Ajusta a imagem ao tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.Biografia {
+    display: flex;
+    flex-direction: column; /* Alinha itens verticalmente */
+    align-items: center; /* Centraliza itens horizontalmente */
+    justify-content: center; /* Centraliza itens verticalmente */
+    text-align: center; /* Centraliza o texto */
+}
+
+.Bio_Resumo {
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    margin-top: 100px;
+    font-size: 26px;
+    color: var(--branco);
+}
+
+.Bio_Texto-Resumo {
+    max-width: 800px; /* Limita a largura do texto para melhorar a leitura */
+    font-size: 16px;
+    color: var(--branco);
+}
+
+.Bio_Texto-nome {
+    font-size: 1.2em; /* Tamanho do texto */
+    color: #ffffff; /* Cor do texto */
+    margin: 10px 0; /* Espaço vertical entre o parágrafo e o título */
+    
+}
+
+.Acoes{
+    display: flex;
+    align-items: center; /* Centraliza itens horizontalmente */
+    justify-content: center; /* Centraliza itens verticalmente */
+    text-align: center; /* Centraliza o texto */
+    gap: 30px;
+    color: var(--branco);
+}
+
+.Button__Styles{
+    background: #b90303;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+    border: 0px;
+    margin: 10px; /* Espaço ao redor do botão */
+    padding: 10px 20px; /* Espaço dentro do botão */
+    cursor: pointer;
+    border-radius: 20px;
+    width: 90px;
+    margin-top: 30px;
+    
+}
+
+.button-container {
+    display: flex; /* Exibe os itens em linha */
+    flex-wrap: wrap; /* Permite que os botões se movam para a linha seguinte se não houver espaço suficiente */
+    gap: 15px; /* Espaço entre os botões */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    padding: 10px; /* Adiciona algum espaço interno ao redor do contêiner */
+    max-width: 600px; /* Define a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    overflow-x: auto; /* Adiciona uma barra de rolagem horizontal se o conteúdo exceder a largura */
+}
+
+/* Estilos do botão já definidos anteriormente */
+.Button__Styles-2 {
+    background: #000000; /* Cor de fundo do botão */
+    border: 2px solid #b90303; /* Borda com largura, estilo e cor */
+    color: var(--branco); /* Cor do texto do botão */
+    padding: 10px 20px; /* Espaço interno ao redor do texto */
+    cursor: pointer; /* Cursor ao passar sobre o botão */
+    border-radius: 20px; /* Bordas arredondadas */
+    white-space: nowrap; /* Impede a quebra de linha no texto do botão */
+}
+
+.Quadro_projeto {
+    padding: 50px;
+    max-width: 900px;
+}
+
+.GridContainer {
+    display: grid;
+    grid-template-columns: 1fr; /* Inicialmente uma coluna */
+    grid-gap: 10px; /* Espaço entre os itens */
+}
+
+.GridItem {
+    border: 2px solid #b90303; /* Borda ao redor de cada quadro */
+    padding: 10px; /* Espaço interno ao redor da imagem */
+    border-radius: 8px; /* Arredonda os cantos do quadro */
+    overflow: hidden; /* Garante que a imagem não ultrapasse os limites do quadro */
+}
+
+.ContentWrapper {
+    display: flex; /* Posiciona a imagem ao lado do texto */
+    align-items: center; /* Centraliza a imagem verticalmente em relação ao texto */
+    gap: 20px; /* Espaço entre a imagem e o texto */
+    margin: 15px;
+}
+
+.ContentWrapper img {
+    max-width: 50%; /* A imagem ocupará até 50% da largura do ContentWrapper */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 4px; /* Arredonda os cantos da imagem */
+}
+
+.ContentWrapper p {
+    flex: 1; /* O texto ocupará o restante do espaço disponível */
+    margin: 0; /* Remove margens padrão */
+}
+
+/* Estilos Gerais do Rodapé */
+footer {
+    background-color: #1a1a1a; /* Cor de fundo do rodapé */
+    color: #ffffff; /* Cor do texto */
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+    font-family: 'Inter', sans-serif; /* Usa a fonte Inter */
+}
+
+/* Mensagem Final */
+.mensagem-final {
+    margin-bottom: 20px;
+}
+.texo2 {
+    margin-bottom: 20px;
+    font-style: italic; /* Deixa o texto em itálico */
+    white-space: pre-line; /* Preserva quebras de linha dentro do texto */
+    display: inline-block; /* Permite que o texto respeite as quebras de linha */
+    text-align: center; /* Centraliza o texto */
+    color: var(--branco);
+}
+.h1-titulo {
+    margin-bottom: 20px;
+    font-style: italic; /* Deixa o texto em itálico */
+    white-space: pre-line; /* Preserva quebras de linha dentro do texto */
+    display: inline-block; /* Permite que o texto respeite as quebras de linha */
+    text-align: center; /* Centraliza o texto */
+    color: var(--branco);
+    font: 1.4em sans-serif;
+}
+
+.mensagem-final p {
+    margin: 10px 0; /* Espaçamento entre os parágrafos */
+}
+
+.mensagem-final a {
+    color: #b90303; /* Cor do link */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.mensagem-final a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Nota de Agradecimento */
+.agradecimento {
+    margin-bottom: 20px;
+    font-style: italic; /* Deixa o texto em itálico */
+}
+
+/* Estilos do Rodapé */
+.rodape {
+    border-top: 1px solid #b90303; /* Linha superior do rodapé */
+    padding-top: 10px;
+}
+
+.rodape p {
+    margin: 5px 0; /* Espaçamento entre os textos */
+}
+
+.rodape a {
+    color: #b90303; /* Cor do link no rodapé */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+.rodape a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Botões */
+.Button__Styles-3 {
+    color: #ffffff; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    margin-top: 10px; /* Espaço superior */
+    border-radius: 5px; /* Arredondamento dos cantos */
+    cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+    text-decoration: none; /* Remove sublinhado dos links */
+}
+.redes-sociais {
+    margin-top: 20px;
+}
+
+.redes-sociais p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.social-icon {
+    width: 30px; /* Tamanho do ícone */
+    height: 30px; /* Tamanho do ícone */
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}
